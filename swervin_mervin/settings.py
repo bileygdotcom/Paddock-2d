@@ -22,7 +22,7 @@ RUMBLE_LENGTH         = 3
 DRAW_DISTANCE         = 125
 ROAD_WIDTH            = 3000
 LANES                 = 4
-BOUNDS                = 2.1
+BOUNDS                = 1.5
 TUNNEL_BOUNDS         = 0.85
 TUNNEL_HEIGHT         = 150
 TUNNEL_LIGHT_FREQ     = 15
@@ -33,7 +33,7 @@ LAP_DIFFICULTY_FACTOR = 2
 LAPS_PER_LEVEL        = 3
 MINIMUM_DIFFICULTY    = 3
 MINIMUM_ENGINE_DIST   = 4000
-CRASH_DIVISOR         = 2
+#CRASH_DIVISOR         = 1
 POINTS                = 15
 CHANCE_OF_BONUSES     = 10
 BONUS_AMOUNT          = 20
@@ -42,10 +42,10 @@ POINT_LOSS_SPRITE     = 0.5
 POINT_LOSS_COMP       = 0.5
 POINT_MILESTONE       = 20000
 MINIMUM_CORNER_SMOKE  = 3
-FIELD_OF_VIEW         = 100 # Degrees
+FIELD_OF_VIEW         = 120 # Degrees
 CAMERA_HEIGHT         = 1200
 CAMERA_DEPTH          = 1 / math.tan((FIELD_OF_VIEW / 2) * math.pi / 180)
-BOTTOM_OFFSET         = 5
+BOTTOM_OFFSET         = 100
 SPEED_BOOST_DECREASE  = 0.04
 SPEED_BOOST_LENGTH    = 50
 HARD_TOP_SPEED        = [(SEGMENT_HEIGHT / (1.0/FPS)) * 1.5, (SEGMENT_HEIGHT / (1.0/FPS)) * 2.4]
@@ -238,7 +238,7 @@ LEVELS             = [{"id": "01-01",
                      ]
 PLAYERS            = [{"name": "#77 Porsche 959",
                        "age": 48,
-                       "top_speed": (SEGMENT_HEIGHT / (1.0/FPS)) * 3.5 * 2.0,
+                       "top_speed": (SEGMENT_HEIGHT / (1.0/FPS)) * 3.5 * 1.0,
                        "offroad_top_speed_factor": 7.0,
                        "acceleration_factor": 2.2,
                        "deceleration": 3.0,

@@ -122,7 +122,7 @@ class Player:
         # Show smoke if player is fangin' it around a corner.
         if abs(segment.curve) > s.MINIMUM_CORNER_SMOKE and\
            self.direction != 0 and\
-           self.speed > (self.settings["top_speed"] / 1.2):
+           self.speed > (self.settings["top_speed"] / (1.2)):
             sprite += "_smoke"
             self.__run_screech()
         elif self.screech_sfx:
@@ -131,8 +131,8 @@ class Player:
         sprite += "1" if (self.animation_frame < s.PLAYER_ANIM_HOLD) else "2"
 
         sprite   = self.settings["sprites"][sprite]
-        s_width  = int(sprite["width"] * scale * s.ROAD_WIDTH * 1.2)
-        s_height = int(sprite["height"] * scale * s.ROAD_WIDTH * 1.2)
+        s_width  = int(sprite["width"] * scale * s.ROAD_WIDTH * (s.CAMERA_HEIGHT/1000))
+        s_height = int(sprite["height"] * scale * s.ROAD_WIDTH * (s.CAMERA_HEIGHT/1000))
 
         p = pygame.image.load(os.path.join("lib", "cars_game", sprite["path"]))
         p = pygame.transform.scale(p, (s_width, s_height))
